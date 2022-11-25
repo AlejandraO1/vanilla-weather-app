@@ -1,1 +1,22 @@
+body {
+  font-family: "Inter", sans-serif;
 
+  background-color: #fff7fa;
+}
+ul {
+  list-style: none;
+  text-align: center;
+}
+
+.column-left {
+  float: left;
+}
+
+.weather-app {
+  background-color: #ff5975;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 15px;
+  border: 2px solid #2e1a35;
+  color: #fedada;
+}
