@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather App</title>
     <link rel="stylesheet" href="src/style.css" />
   </head>
@@ -23,7 +24,7 @@
     <div class="container">
       <div class="weather-app">
         <div class="current-city-weather">
-          <h2>New York</h2>
+          <h2 id="city">New York</h2>
           <ul>
             <li>Friday 12:00</li>
             <li>
@@ -32,7 +33,10 @@
                 alt="cloudy"
               />
             </li>
-            <li><div class="current-temp">50 °F | °C</div></li>
+            <li>
+              <span class="current-temp">50</span>
+              <span class="units"><sup>°F | °C</sup></span>
+            </li>
             <li>Cloudy</li>
           </ul>
           <div class="row">
