@@ -22,39 +22,35 @@
   <body>
     <div class="container">
       <div class="weather-app">
-        <div class="row">
-          <div class="col-6">
-            <h2>New York</h2>
-            <ul class="column-left">
-              <li>Friday 12:00</li>
-              <li>50 °F | °C</li>
-              <li>Cloudy</li>
-            </ul>
-          </div>
-          <div class="col-6">
-            <ul class="column-right">
-              <li>
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
-                  alt="cloudy"
-                />
-              </li>
-              <li>Humidity: 84%</li>
-              <li>Wind: 12 mph</li>
-            </ul>
+        <div class="current-city-weather">
+          <h2>New York</h2>
+          <ul>
+            <li>Friday 12:00</li>
+            <li>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+                alt="cloudy"
+              />
+            </li>
+            <li><div class="current-temp">50 °F | °C</div></li>
+            <li>Cloudy</li>
+          </ul>
+          <div class="row">
+            <div class="col-6">Humidity: 84%</div>
+            <div class="col-6">Wind: 12 mph</div>
           </div>
         </div>
       </div>
-      <small>
-        <a
-          href="https://github.com/AlejandraO1/vanilla-weather-app"
-          target="_blank"
-        >
-          Open-source Code</a
-        >
-        by Alejandra Ortega
-      </small>
     </div>
+    <small>
+      <a
+        href="https://github.com/AlejandraO1/vanilla-weather-app"
+        target="_blank"
+      >
+        Open-source Code</a
+      >
+      by Alejandra Ortega
+    </small>
     <script src="src/app.js"></script>
   </body>
 </html>
