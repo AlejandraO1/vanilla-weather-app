@@ -45,3 +45,7 @@ small {
   padding-bottom: 5px;
   font-size: 15px;
 }
+
+#description {
+  text-transform: capitalize;
+}
