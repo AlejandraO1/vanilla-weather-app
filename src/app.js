@@ -1,3 +1,4 @@
+//To display current time and date
 function formatDateTime(timestamp) {
   let currentDate = new Date(timestamp);
   let hours = currentDate.getHours();
@@ -21,6 +22,7 @@ function formatDateTime(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+//To display a city's weather
 function displayCurrentTemperature(response) {
   let cityElement = document.querySelector("#city");
   let dateTimeElement = document.querySelector("#date-time");
@@ -43,10 +45,22 @@ function displayCurrentTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
-let apiKey = "0d38oda45d824a5t0254fbaff5f740bd";
-let urlEndpoint = "https://api.shecodes.io/weather/v1/current?";
-let query = "New York";
-let units = "imperial";
-let apiUrl = `${urlEndpoint}query=${query}&key=${apiKey}&units=${units}`;
+//For the search engine
+function searchCity(city) {
+  let apiKey = "0d38oda45d824a5t0254fbaff5f740bd";
+  let urlEndpoint = "https://api.shecodes.io/weather/v1/current?";
+  let units = "imperial";
+  let apiUrl = `${urlEndpoint}query=${city}&key=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayCurrentTemperature);
+}
 
-axios.get(apiUrl).then(displayCurrentTemperature);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  searchCity(cityInputElement.value);
+}
+
+searchCity("New York");
+
+let form = document.querySelector("#search-bar");
+form.addEventListener("submit", handleSubmit);

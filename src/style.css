@@ -3,6 +3,11 @@ body {
   background-color: #fff7fa;
 }
 
+form {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
 h2 {
   text-align: center;
   padding-top: 5px;
@@ -48,4 +53,22 @@ small {
 
 #description {
   text-transform: capitalize;
+}
+
+#city-input {
+  color: #fff7fa;
+  background-color: #fedada;
+  border: 1px solid #2e1a35;
+}
+
+#city-input:focus {
+  outline: none;
+}
+
+#search {
+  background-color: #fff7fa;
+  color: #2e1a35;
+  border: 1px solid #2e1a35;
+  border-radius: 10px;
+  padding: 5px;
 }
