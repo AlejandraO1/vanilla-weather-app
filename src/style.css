@@ -3,46 +3,53 @@ body {
   background-color: #fff7fa;
 }
 
-form {
+form,
+h2,
+ul,
+form,
+small,
+.col-6 {
   text-align: center;
+}
+
+form {
   padding-bottom: 5px;
 }
 
 h2 {
-  text-align: center;
   padding-top: 5px;
   font-size: 30px;
 }
 
 ul {
   list-style: none;
-  text-align: center;
   margin: 0px;
   padding: 0px;
   font-size: 15px;
 }
 
-small {
-  padding-left: 10px;
-}
-
 a {
   text-decoration: none;
-  color: #2e1a35;
+  color: #bc1e51;
   transition: all 200ms ease-in-out;
 }
 
+small {
+  display: block;
+  color: #2e1a35;
+}
+
 a:hover {
-  color: #fedada;
+  color: inherit;
 }
 
 .weather-app {
-  background-color: #ff5975;
+  background-color: #fad1d7;
   max-width: 600px;
   margin: 30px auto;
   padding: 15px;
   border: 2px solid #2e1a35;
-  color: #fedada;
+  color: #490b3e;
 }
 
 .current-city-weather {
@@ -66,8 +73,8 @@ a:hover {
 }
 
 #city-input {
-  color: #fff7fa;
-  background-color: #fedada;
+  color: #490b3e;
+  background-color: #fad1d7;
   border: 1px solid #2e1a35;
 }
 
@@ -76,7 +83,7 @@ a:hover {
 }
 
 #search {
-  background-color: #fff7fa;
+  background-color: #f1b813;
   color: #2e1a35;
   border: 1px solid #2e1a35;
   border-radius: 10px;
@@ -84,6 +91,14 @@ a:hover {
 }
 
 .active {
-  color: #fedada;
+  color: #490b3e;
   cursor: default;
+}
+
+.git-link {
+  transition: all 200ms ease-in-out;
+}
+
+.git-link:hover {
+  color: #2e1a35;
 }

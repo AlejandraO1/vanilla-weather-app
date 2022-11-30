@@ -62,6 +62,7 @@ function handleSubmit(event) {
   searchCity(cityInputElement.value);
 }
 
+//Unit Conversion
 function displayCelsiusTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
