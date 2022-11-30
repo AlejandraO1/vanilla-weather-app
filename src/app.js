@@ -23,16 +23,23 @@ function formatDateTime(timestamp) {
 
 function displayCurrentTemperature(response) {
   let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = response.data.city;
   let dateTimeElement = document.querySelector("#date-time");
-  dateTimeElement.innerHTML = formatDateTime(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   let descriptionElement = document.querySelector("#description");
-  descriptionElement.innerHTML = response.data.condition.description;
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
   let windElement = document.querySelector("#wind");
+
+  cityElement.innerHTML = response.data.city;
+  dateTimeElement.innerHTML = formatDateTime(response.data.time * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
+  iconElement.setAttribute("alt", `${response.data.condition.icon}`);
+  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+  descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
