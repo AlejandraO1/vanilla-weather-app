@@ -83,8 +83,8 @@ a:hover {
 }
 
 #search {
-  background-color: #f1b813;
-  color: #2e1a35;
+  background-color: #490b3e;
+  color: #fad1d7;
   border: 1px solid #2e1a35;
   border-radius: 10px;
   padding: 5px;
@@ -101,4 +101,24 @@ a:hover {
 
 .git-link:hover {
   color: #2e1a35;
+}
+
+.weather-forecast {
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.forecast-date {
+  font-size: 15px;
+}
+
+.forecast-temp {
+  font-size: 13px;
+}
+
+.forecast-temp-min {
+  opacity: 0.5;
 }
