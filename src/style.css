@@ -20,9 +20,9 @@ form {
 }
 
 #search {
-  background-color: #490b3e;
-  color: #fad1d7;
-  border: 1px solid #2e1a35;
+  background-color: #3d3939;
+  color: #f8f4f4;
+  border: 1px solid #3d3939;
   border-radius: 10px;
   padding: 5px;
 }
@@ -127,4 +127,8 @@ small {
 
 .git-link:hover {
   color: #2e1a35;
+}
+
+iframe {
+  opacity: 0.9;
 }
