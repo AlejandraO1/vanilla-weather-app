@@ -45,6 +45,8 @@ function displayCurrentTemperature(response) {
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = Math.round(response.data.temperature.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
+
+  getForecast(response.data.city);
 }
 
 //For the search engine
@@ -81,7 +83,16 @@ function displayFahrenheitTemp(event) {
 }
 
 //For the forecast
-function displayForecast() {
+function getForecast(city) {
+  let apiEndpoint = `https://api.shecodes.io/weather/v1/forecast?query`;
+  let apiKey = "0d38oda45d824a5t0254fbaff5f740bd";
+  let units = "imperial";
+  let apiUrl = `${apiEndpoint}=${city}&key=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Fri", "Sat", "Sun", "Mon"];
@@ -119,4 +130,3 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
 searchCity("New York");
-displayForecast();
