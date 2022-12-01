@@ -80,6 +80,13 @@ function displayFahrenheitTemp(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
+//For the forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = "Forecast";
+}
+
+//Global Variables
 let fahrenheitTemp = null;
 
 let form = document.querySelector("#search-bar");
@@ -92,3 +99,4 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
 searchCity("New York");
+displayForecast();
