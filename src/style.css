@@ -90,9 +90,12 @@ a:hover {
   cursor: default;
 }
 
+#playlist {
+  margin-top: 5px;
+}
+
 /* Forecast */
 .weather-forecast {
-  margin-top: 15px;
   margin-left: 20px;
   margin-right: 20px;
   padding: 10px;

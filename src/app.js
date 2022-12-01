@@ -54,6 +54,60 @@ function displayCurrentTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
 
   getForecast(response.data.city);
+  changeMusic(response.data.condition.icon);
+}
+
+//Change music in the Spotify playlist
+function changeMusic(icon) {
+  let playlist = document.querySelector("#playlist");
+  if (icon === "clear-sky-day") {
+    playlist.setAttribute(
+      "src",
+      `https://open.spotify.com/embed/track/6dGnYIeXmHdcikdzNNDMm2?utm_source=generator&theme=0`
+    );
+  } else if (icon === "clear-sky-night") {
+    playlist.setAttribute(
+      "src",
+      `https://open.spotify.com/embed/track/0FDzzruyVECATHXKHFs9eJ?utm_source=generator&theme=0`
+    );
+  } else if (
+    icon === "few-clouds-day" ||
+    icon === "few-clouds-night" ||
+    icon === "scattered-clouds-day" ||
+    icon === "scattered-clouds-night" ||
+    icon === "broken-clouds-day" ||
+    icon === "broken-clouds-night"
+  ) {
+    playlist.setAttribute(
+      "src",
+      `https://open.spotify.com/embed/track/1CKvinIoExZec5pv8OHtzU?utm_source=generator&theme=0`
+    );
+  } else if (
+    icon === "shower-rain-day" ||
+    icon === "shower-rain-night" ||
+    icon === "rain-day" ||
+    icon === "rain-night"
+  ) {
+    playlist.setAttribute(
+      "src",
+      `https://open.spotify.com/embed/track/2IvetNzSZMH5gwjInoyr18?utm_source=generator&theme=0`
+    );
+  } else if (icon === "thunderstorm-day" || icon === "thunderstorm-night") {
+    playlist.setAttribute(
+      "src",
+      `https://open.spotify.com/embed/track/1zB4vmk8tFRmM9UULNzbLB?utm_source=generator&theme=0`
+    );
+  } else if (icon === "snow-day" || icon === "snow-night") {
+    playlist.setAttribute(
+      "src",
+      `https://open.spotify.com/embed/track/2SrL6XxbWgCZFYJB7qOatl?utm_source=generator&theme=0`
+    );
+  } else if (icon === "mist-day" || icon === "mist-night") {
+    playlist.setAttribute(
+      "src",
+      `https://open.spotify.com/embed/track/69cIkktQN1ef2VtZuHxNwK?utm_source=generator&theme=0`
+    );
+  }
 }
 
 //For the search engine
@@ -114,7 +168,7 @@ function displayForecast(response) {
         forecastDay.condition.icon
       }.png"
       alt="sunny"
-      width="36"
+      width="48"
     />
     <div class="forecast-temp">
       <span class="forecast-temp-max">${Math.round(
