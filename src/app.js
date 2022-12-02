@@ -220,6 +220,31 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
+///For the current location button
+function showPositionCurrentTemp(position) {
+  let apiEndpoint = `https://api.shecodes.io/weather/v1/current?lon=`;
+  let apiKey = "0d38oda45d824a5t0254fbaff5f740bd";
+  let units = "imperial";
+  let apiUrl = `${apiEndpoint}${position.coords.longitude}&lat=${position.coords.latitude}&key=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayCurrentTemperature);
+}
+
+function showPositionForecast(position) {
+  let apiEndpoint = `https://api.shecodes.io/weather/v1/forecast?lon=`;
+  let apiKey = "0d38oda45d824a5t0254fbaff5f740bd";
+  let units = "imperial";
+  let apiUrl = `${apiEndpoint}${position.coords.longitude}&lat=${position.coords.latitude}&key=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayLocationWeather(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(
+    showPositionCurrentTemp,
+    showPositionForecast
+  );
+}
+
 //Global Variables
 let fahrenheitTemp = null;
 
@@ -231,5 +256,8 @@ celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let buttonElement = document.querySelector(".current-location");
+buttonElement.addEventListener("click", displayLocationWeather);
 
 searchCity("New York");
