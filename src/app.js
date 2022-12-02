@@ -55,6 +55,40 @@ function displayCurrentTemperature(response) {
 
   getForecast(response.data.city);
   changeMusic(response.data.condition.icon);
+  changeBackground(response.data.condition.icon);
+}
+
+//Change background according to weather conditon
+function changeBackground(icon) {
+  if (icon === "clear-sky-day") {
+    document.body.style.backgroundImage = "url(src/sun.jpg)";
+  } else if (icon === "clear-sky-night") {
+    document.body.style.backgroundImage = "url(src/moon.jpg)";
+  } else if (icon === "few-clouds-day") {
+    document.body.style.backgroundImage = "url(src/cloud-sun.jpg)";
+  } else if (icon === "few-clouds-night") {
+    document.body.style.backgroundImage = "url(src/cloud-moon.jpg)";
+  } else if (icon === "scattered-clouds-day" || icon === "broken-clouds-day") {
+    document.body.style.backgroundImage = "url(src/day-cloud.jpg)";
+  } else if (
+    icon === "scattered-clouds-night" ||
+    icon === "broken-clouds-night"
+  ) {
+    document.body.style.backgroundImage = "url(src/night-cloud.jpg)";
+  } else if (
+    icon === "shower-rain-day" ||
+    icon === "shower-rain-night" ||
+    icon === "rain-day" ||
+    icon === "rain-night"
+  ) {
+    document.body.style.backgroundImage = "url(src/rain.jpg)";
+  } else if (icon === "thunderstorm-day" || icon === "thunderstorm-night") {
+    document.body.style.backgroundImage = "url(src/lightning.jpg)";
+  } else if (icon === "snow-day" || icon === "snow-night") {
+    document.body.style.backgroundImage = "url(src/snow.jpg)";
+  } else if (icon === "mist-day" || icon === "mist-night") {
+    document.body.style.backgroundImage = "url(src/mist.jpg)";
+  }
 }
 
 //Change music in the Spotify playlist
