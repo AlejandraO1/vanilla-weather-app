@@ -4,22 +4,37 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  width: 100%;
 }
 
 /*Weather App */
 .weather-app {
-  background-color: #fad1d7;
+  background-color: #f7dedf;
   max-width: 600px;
   margin: 30px auto;
   padding: 15px;
-  border: 2px solid #2e1a35;
+  border: 1px solid #2e1a35;
   color: #490b3e;
   opacity: 0.8;
 }
 
-/* Search Bar */
+/* Search Bar and Current Location */
 form {
   padding-bottom: 5px;
+  display: inline-block;
+}
+
+button {
+  display: inline-block;
+  padding: 5px;
+  margin-left: 5px;
+  border-radius: 12px;
+  border: 1px solid #3d3939;
+  color: #f8f4f4;
+  background-color: #3d3939;
+}
+
+.search-location {
   text-align: center;
 }
 
@@ -27,13 +42,13 @@ form {
   background-color: #3d3939;
   color: #f8f4f4;
   border: 1px solid #3d3939;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 5px;
 }
 
 #city-input {
   color: #490b3e;
-  background-color: #fad1d7;
+  background-color: #f7dedf;
   border: 1px solid #2e1a35;
 }
 
@@ -114,7 +129,7 @@ a:hover {
 }
 
 .forecast-temp-min {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 /*Git Link */

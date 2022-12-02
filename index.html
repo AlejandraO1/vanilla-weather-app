@@ -23,16 +23,19 @@
   <body>
     <div class="container">
       <div class="weather-app">
-        <form id="search-bar">
-          <input
-            type="text"
-            placeholder="Search City"
-            autocomplete="off"
-            autofocus="on"
-            id="city-input"
-          />
-          <input type="submit" value="Search" id="search" />
-        </form>
+        <div class="search-location">
+          <form id="search-bar">
+            <input
+              type="text"
+              placeholder="Search City"
+              autocomplete="off"
+              autofocus="on"
+              id="city-input"
+            />
+            <input type="submit" value="Search" id="search" />
+          </form>
+          <button class="current-location">Current Location</button>
+        </div>
         <div class="current-city-weather">
           <h2 id="city"></h2>
           <ul>
