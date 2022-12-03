@@ -104,9 +104,12 @@ function changeMusic(icon) {
       "src",
       `https://open.spotify.com/embed/track/0FDzzruyVECATHXKHFs9eJ?utm_source=generator&theme=0`
     );
+  } else if (icon === "few-clouds-day" || icon === "few-clouds-night") {
+    playlist.setAttribute(
+      "src",
+      `https://open.spotify.com/embed/track/03v70ZBxmcPX3RWAZMzqaW?utm_source=generator&theme=0`
+    );
   } else if (
-    icon === "few-clouds-day" ||
-    icon === "few-clouds-night" ||
     icon === "scattered-clouds-day" ||
     icon === "scattered-clouds-night" ||
     icon === "broken-clouds-day" ||
@@ -139,7 +142,7 @@ function changeMusic(icon) {
   } else if (icon === "mist-day" || icon === "mist-night") {
     playlist.setAttribute(
       "src",
-      `https://open.spotify.com/embed/track/69cIkktQN1ef2VtZuHxNwK?utm_source=generator&theme=0`
+      `https://open.spotify.com/embed/track/0whWpxV2KF5yPcPdjzDYKw?utm_source=generator&theme=0`
     );
   }
 }
