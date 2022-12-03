@@ -24,14 +24,15 @@ form {
   display: inline-block;
 }
 
-button {
+.current-location {
   display: inline-block;
-  padding: 5px;
   margin-left: 5px;
   border-radius: 12px;
   border: 1px solid #3d3939;
   color: #f8f4f4;
   background-color: #3d3939;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .search-location {
@@ -43,7 +44,8 @@ button {
   color: #f8f4f4;
   border: 1px solid #3d3939;
   border-radius: 12px;
-  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #city-input {
@@ -108,6 +110,11 @@ a:hover {
   cursor: default;
 }
 
+/*Spotify Player */
+iframe {
+  opacity: 0.9;
+}
+
 #playlist {
   margin-top: 5px;
 }
@@ -145,8 +152,4 @@ small {
 
 .git-link:hover {
   color: #2e1a35;
-}
-
-iframe {
-  opacity: 0.9;
 }
