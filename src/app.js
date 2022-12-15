@@ -142,7 +142,7 @@ function changeMusic(icon) {
   } else if (icon === "mist-day" || icon === "mist-night") {
     playlist.setAttribute(
       "src",
-      `https://open.spotify.com/embed/track/0whWpxV2KF5yPcPdjzDYKw?utm_source=generator&theme=0`
+      `https://open.spotify.com/embed/track/5NnZ4JJxWiqqhYNu3rwmFj?utm_source=generator&theme=0`
     );
   }
 }
